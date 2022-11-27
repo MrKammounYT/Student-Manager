@@ -1,22 +1,15 @@
 package frameWorks;
 
-import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 
 public class HomePage extends JFrame implements ActionListener {
 
@@ -24,7 +17,8 @@ public class HomePage extends JFrame implements ActionListener {
 	JButton classrom;
 	JButton payments;
 	JButton settings;
-	public HomePage() {
+	JButton leave;
+	public HomePage(String userName) {
 		JPanel infoPanel = new JPanel();
 		infoPanel.setSize(330, 800);
 		infoPanel.setBounds(0,0,333,800);
@@ -58,25 +52,20 @@ public class HomePage extends JFrame implements ActionListener {
 		infoPanel.add(icon);
 		
 		JLabel username = new JLabel();
-		username.setText("user 1");
+		username.setText(userName);
 		username.setFont(new Font("",Font.BOLD,20));
-		username.setBounds(135, 200, 100, 30);
-		username.setAlignmentX(CENTER_ALIGNMENT);
-		username.setAlignmentY(CENTER_ALIGNMENT);
+		username.setBounds(115, 200, 330, 30);
 		infoPanel.add(username);
 		
+		leave = new JButton();
+		leave.setText("Leave");
+		leave.setFont(new Font("",Font.BOLD,25));
+		leave.setBounds(65, 650, 200, 50);
+		leave.setBackground(Color.red);
+		infoPanel.add(leave);
 		
 		
 		infoPanel.setLayout(null);
-		
-		
-		
-	
-		
-		
-		
-		
-		
 		this.setLayout(null);
 		this.add(infoPanel);
 		this.setAlwaysOnTop(true);

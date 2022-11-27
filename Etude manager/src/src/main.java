@@ -11,7 +11,7 @@ public class main {
 
 	public static void main(String[] args) {
 
-		new HomePage();
+		new HomePage("kammoun");
 		
 		
 		

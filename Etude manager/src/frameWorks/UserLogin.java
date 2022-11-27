@@ -212,7 +212,7 @@ public class UserLogin extends JFrame implements ActionListener {
 					JComponent comp = (JComponent) e.getSource();
 					  Window win = SwingUtilities.getWindowAncestor(comp);
 					  win.dispose();
-					new HomePage();
+					new HomePage("test");
 					
 					  
 				}
